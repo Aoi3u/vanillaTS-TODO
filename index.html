@@ -5,24 +5,36 @@
     <title>TS-TODO</title>
   </head>
   <body>
-    <div>
+    <div class="input-area">
       <input type="text" placeholder="TODOを入力">
       <button>追加</button>
     </div>
-    <div>
-      <p>未完了のTODO</p>
+    <div class="incomplete-area">
+      <h3 class="title">未完了</h3>
       <ul>
-        <li>TODO</li>
-        <button>完了</button>
-        <button>削除</button>
+        <li>
+          <div class="list-row">
+            <p class="todo-item">TODO</p>
+            <button>完了</button>
+            <button>削除</button>
+          </div>
+        </li>
+        <li>
+          <div class="list-row">
+            <p class="todo-item">TODO</p>
+            <button>完了</button>
+            <button>削除</button>
+          </div>
+        </li>
       </ul>
     </div>
-    <div>
-      <p>完了のTODO</p>
+    <div class="complete-area">
+      <h3 class="title">完了</h3>
       <ul>
-        <li>TODOだった</li>
-        <button>完了</button>
-        <button>削除</button>
+        <div  class="list-row">
+          <li>済</li>
+          <button>戻す</button>
+        </div>
       </ul>
     </div>
     <script type="module" src="/src/main.ts"></script>
