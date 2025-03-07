@@ -2,12 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>TS-TODO</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div>
+      <input type="text" placeholder="TODOを入力">
+      <button>追加</button>
+    </div>
+    <div>
+      <p>未完了のTODO</p>
+      <ul>
+        <li>TODO</li>
+        <button>完了</button>
+        <button>削除</button>
+      </ul>
+    </div>
+    <div>
+      <p>完了のTODO</p>
+      <ul>
+        <li>TODOだった</li>
+        <button>完了</button>
+        <button>削除</button>
+      </ul>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
