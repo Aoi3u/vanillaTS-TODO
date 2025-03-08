@@ -18,13 +18,24 @@ const onClickAdd = () => {
   // button(完了)タグ生成
   const completeButton = document.createElement("button");
   completeButton.innerText = "完了";
-  completeButton.addEventListener("click", () => {
 
+  completeButton.addEventListener("click", () => {
+    const moveTarget = completeButton.closest("li");
+    // 完了ボタンとその隣の削除ボタンを削除
+    completeButton.nextElementSibling?.remove();
+    completeButton.remove();
+    // 戻すボタンを生成
+    const backButton = document.createElement("button");
+    backButton.innerText = "戻す";
+    moveTarget?.firstElementChild?.appendChild(backButton);
+    // 完了リストに移動
+    document.getElementById("complete-list")?.appendChild(moveTarget);
   });
 
   // button(削除)タグ生成
   const deleteButton = document.createElement("button");
   deleteButton.innerText = "削除";
+  
   deleteButton.addEventListener("click", () => {
     // 押された削除ボタンの親にあるliタグを未完了リストから削除
     const deleteTarget = deleteButton.closest("li");
