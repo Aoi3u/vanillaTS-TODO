@@ -19,7 +19,7 @@ button {
 }
 
 button:hover {
-  background-color: rgb(174, 183, 211); 
+  background-color: rgb(136, 143, 164); 
   color: white;
   cursor: pointer;
 }
